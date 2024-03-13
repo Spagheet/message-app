@@ -1,0 +1,34 @@
+apply plugin: 'java'
+apply plugin: 'application'
+// Define the main class for the JAR manifest
+mainClassName = 'main.java.com.ubo.tp.message.MessageAppLauncher'
+
+sourceSets {
+    main {
+        resources {
+            srcDirs = ['src/main/resources']
+        }
+    }
+}
+
+// Configure the JAR task
+jar {
+    // Include resources in the JAR
+    from sourceSets.main.resources
+    // Set the main class for the JAR manifest
+    manifest {
+        attributes 'Main-Class': mainClassName
+    }
+}
+
+// Define dependencies if needed
+dependencies {
+    // Example dependency
+    // implementation 'group:artifact:version'
+}
+
+// Configure repositories if needed
+repositories {
+    // Example repository
+    // mavenCentral()
+}
