@@ -1,8 +1,8 @@
-package main.java.com.ubo.tp.message.logger;
+package com.ubo.tp.message.logger;
 
-import main.java.com.ubo.tp.message.core.database.IDatabaseObserver;
-import main.java.com.ubo.tp.message.datamodel.Message;
-import main.java.com.ubo.tp.message.datamodel.User;
+import com.ubo.tp.message.core.database.IDatabaseObserver;
+import com.ubo.tp.message.datamodel.Message;
+import com.ubo.tp.message.datamodel.User;
 
 public class DatabaseLogger implements IDatabaseObserver {
     private void printMessage(Message m) {

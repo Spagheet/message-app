@@ -1,6 +1,6 @@
-package main.java.com.ubo.tp.message.datamodel;
+package com.ubo.tp.message.datamodel;
 
-import main.java.com.ubo.tp.message.ihm.controler.UserListController;
+import com.ubo.tp.message.ihm.controler.UserListController;
 
 import java.util.ArrayList;
 import java.util.List;

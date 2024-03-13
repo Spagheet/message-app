@@ -1,9 +1,9 @@
-package main.java.com.ubo.tp.message.ihm.component;
+package com.ubo.tp.message.ihm.component;
 
-import main.java.com.ubo.tp.message.datamodel.SessionObserver;
-import main.java.com.ubo.tp.message.datamodel.User;
-import main.java.com.ubo.tp.message.ihm.controler.*;
-import main.java.com.ubo.tp.message.ihm.view.panel.ControlableContentPanel;
+import com.ubo.tp.message.datamodel.SessionObserver;
+import com.ubo.tp.message.datamodel.User;
+import com.ubo.tp.message.ihm.controler.*;
+import com.ubo.tp.message.ihm.view.panel.ControlableContentPanel;
 
 import javax.swing.*;
 import java.awt.*;

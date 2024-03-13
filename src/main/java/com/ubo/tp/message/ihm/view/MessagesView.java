@@ -1,7 +1,7 @@
-package main.java.com.ubo.tp.message.ihm.view;
+package com.ubo.tp.message.ihm.view;
 
-import main.java.com.ubo.tp.message.datamodel.Message;
-import main.java.com.ubo.tp.message.ihm.view.panel.*;
+import com.ubo.tp.message.datamodel.Message;
+import com.ubo.tp.message.ihm.view.panel.*;
 
 import javax.swing.*;
 import java.awt.*;

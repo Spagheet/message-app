@@ -1,7 +1,7 @@
-package main.java.com.ubo.tp.message.datamodel;
+package com.ubo.tp.message.datamodel;
 
-import main.java.com.ubo.tp.message.core.database.IDatabaseObserver;
-import main.java.com.ubo.tp.message.ihm.controler.MessagesController;
+import com.ubo.tp.message.core.database.IDatabaseObserver;
+import com.ubo.tp.message.ihm.controler.MessagesController;
 
 import java.util.*;
 

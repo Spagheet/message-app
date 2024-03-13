@@ -1,4 +1,4 @@
-package main.java.com.ubo.tp.message.ihm.view;
+package com.ubo.tp.message.ihm.view;
 
 import javax.swing.*;
 

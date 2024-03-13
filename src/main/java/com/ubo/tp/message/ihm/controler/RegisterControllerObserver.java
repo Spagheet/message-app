@@ -1,4 +1,4 @@
-package main.java.com.ubo.tp.message.ihm.controler;
+package com.ubo.tp.message.ihm.controler;
 
 import java.util.Map;
 

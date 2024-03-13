@@ -1,15 +1,14 @@
-package main.java.com.ubo.tp.message.ihm.controler;
+package com.ubo.tp.message.ihm.controler;
 
-import main.java.com.ubo.tp.message.datamodel.FilterObserver;
-import main.java.com.ubo.tp.message.datamodel.Message;
-import main.java.com.ubo.tp.message.ihm.component.ButtonAction;
-import main.java.com.ubo.tp.message.ihm.view.MessagesView;
-import main.java.com.ubo.tp.message.ihm.view.panel.AppButton;
+import com.ubo.tp.message.datamodel.FilterObserver;
+import com.ubo.tp.message.datamodel.Message;
+import com.ubo.tp.message.ihm.component.ButtonAction;
+import com.ubo.tp.message.ihm.view.MessagesView;
+import com.ubo.tp.message.ihm.view.panel.AppButton;
 
-import java.awt.*;
 import java.util.List;
 
-public class MessagesController extends MenuOptionController<MessagesControllerObserver> implements FilterObserver {
+public class MessagesController extends AbstractMenuOptionController<MessagesControllerObserver> implements FilterObserver {
     protected MessagesView messagesView;
     protected AppButton filterButton;
     protected AppButton sendMessage;

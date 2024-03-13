@@ -1,14 +1,11 @@
-package main.java.com.ubo.tp.message.ihm.view.panel;
+package com.ubo.tp.message.ihm.view.panel;
 
-import main.java.com.ubo.tp.message.core.util.ImagePanelGenerator;
-import main.java.com.ubo.tp.message.datamodel.Message;
-import main.java.com.ubo.tp.message.datamodel.User;
+import com.ubo.tp.message.common.util.ImagePanelGenerator;
+import com.ubo.tp.message.datamodel.Message;
+import com.ubo.tp.message.datamodel.User;
 
 import javax.swing.*;
 import java.awt.*;
-import java.io.File;
-import java.net.URISyntaxException;
-import java.net.URL;
 
 public class MessagePanel extends JPanel {
     Message message;

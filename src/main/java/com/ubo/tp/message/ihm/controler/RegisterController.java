@@ -1,15 +1,14 @@
-package main.java.com.ubo.tp.message.ihm.controler;
+package com.ubo.tp.message.ihm.controler;
 
-import main.java.com.ubo.tp.message.ihm.component.ButtonAction;
-import main.java.com.ubo.tp.message.ihm.view.FileSelectionView;
-import main.java.com.ubo.tp.message.ihm.view.RegisterAccountView;
-import main.java.com.ubo.tp.message.ihm.view.panel.AppButton;
+import com.ubo.tp.message.ihm.component.ButtonAction;
+import com.ubo.tp.message.ihm.view.FileSelectionView;
+import com.ubo.tp.message.ihm.view.RegisterAccountView;
+import com.ubo.tp.message.ihm.view.panel.AppButton;
 
-import java.awt.*;
 import java.util.*;
 import java.util.List;
 
-public class RegisterController extends MenuOptionController<RegisterControllerObserver> {
+public class RegisterController extends AbstractMenuOptionController<RegisterControllerObserver> {
     protected RegisterAccountView registerView;
     protected AppButton registerButton;
     protected AppButton folderSelectButton;

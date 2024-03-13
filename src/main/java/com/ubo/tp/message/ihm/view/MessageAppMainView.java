@@ -1,7 +1,7 @@
-package main.java.com.ubo.tp.message.ihm.view;
+package com.ubo.tp.message.ihm.view;
 
-import main.java.com.ubo.tp.message.ihm.view.panel.ControlableContentPanel;
-import main.java.com.ubo.tp.message.ihm.view.panel.MessageAppMenuBar;
+import com.ubo.tp.message.ihm.view.panel.ControlableContentPanel;
+import com.ubo.tp.message.ihm.view.panel.MessageAppMenuBar;
 
 import javax.swing.*;
 import java.awt.*;

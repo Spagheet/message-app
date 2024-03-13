@@ -1,10 +1,10 @@
-package main.java.com.ubo.tp.message.ihm.controler;
+package com.ubo.tp.message.ihm.controler;
 
-import main.java.com.ubo.tp.message.datamodel.SessionObserver;
-import main.java.com.ubo.tp.message.datamodel.User;
-import main.java.com.ubo.tp.message.ihm.component.ButtonAction;
-import main.java.com.ubo.tp.message.ihm.view.AppMenuView;
-import main.java.com.ubo.tp.message.ihm.view.panel.AppButton;
+import com.ubo.tp.message.datamodel.SessionObserver;
+import com.ubo.tp.message.datamodel.User;
+import com.ubo.tp.message.ihm.component.ButtonAction;
+import com.ubo.tp.message.ihm.view.AppMenuView;
+import com.ubo.tp.message.ihm.view.panel.AppButton;
 
 import java.awt.*;
 import java.util.HashSet;

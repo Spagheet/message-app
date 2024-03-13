@@ -1,14 +1,13 @@
-package main.java.com.ubo.tp.message.ihm.controler;
+package com.ubo.tp.message.ihm.controler;
 
-import main.java.com.ubo.tp.message.ihm.component.ButtonAction;
-import main.java.com.ubo.tp.message.ihm.view.LoginView;
-import main.java.com.ubo.tp.message.ihm.view.panel.AppButton;
+import com.ubo.tp.message.ihm.component.ButtonAction;
+import com.ubo.tp.message.ihm.view.LoginView;
+import com.ubo.tp.message.ihm.view.panel.AppButton;
 
-import java.awt.*;
 import java.util.HashSet;
 import java.util.Set;
 
-public class LoginController extends MenuOptionController<LoginControllerObserver>{
+public class LoginController extends AbstractMenuOptionController<LoginControllerObserver> {
    LoginView loginView;
    AppButton loginButton;
    Set<AppButton> buttonSet;

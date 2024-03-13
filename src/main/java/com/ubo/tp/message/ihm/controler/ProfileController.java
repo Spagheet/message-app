@@ -1,20 +1,18 @@
-package main.java.com.ubo.tp.message.ihm.controler;
+package com.ubo.tp.message.ihm.controler;
 
-import main.java.com.ubo.tp.message.datamodel.*;
-import main.java.com.ubo.tp.message.ihm.component.ButtonAction;
-import main.java.com.ubo.tp.message.ihm.view.FileSelectionView;
-import main.java.com.ubo.tp.message.ihm.view.ProfileView;
-import main.java.com.ubo.tp.message.ihm.view.UserListView;
-import main.java.com.ubo.tp.message.ihm.view.panel.AppButton;
+import com.ubo.tp.message.datamodel.*;
+import com.ubo.tp.message.ihm.component.ButtonAction;
+import com.ubo.tp.message.ihm.view.FileSelectionView;
+import com.ubo.tp.message.ihm.view.ProfileView;
+import com.ubo.tp.message.ihm.view.panel.AppButton;
 
-import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ProfileController extends MenuOptionController<ProfileControllerObserver> implements SessionObserver {
+public class ProfileController extends AbstractMenuOptionController<ProfileControllerObserver> implements SessionObserver {
     ProfileView profileView;
     MouseAdapter avatarClick;
     AppButton subscribeButton;

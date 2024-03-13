@@ -1,6 +1,6 @@
-package main.java.com.ubo.tp.message.logger;
+package com.ubo.tp.message.logger;
 
-import main.java.com.ubo.tp.message.core.directory.IWatchableDirectoryObserver;
+import com.ubo.tp.message.core.directory.IWatchableDirectoryObserver;
 
 import java.io.File;
 import java.util.Set;
