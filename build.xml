@@ -1,0 +1,30 @@
+<project name="MessageApp" default="jar" basedir=".">
+	<property name="src.dir" value="src"/>
+	<property name="resources.dir" value="src/main/resources"/>
+	<property name="build.dir" value="build"/>
+	<property name="dist.dir" value="dist"/>
+	<path id="classpath">
+		<pathelement location="${src.dir}"/>
+		<pathelement location="${resources.dir}"/>
+	</path>
+	<target name="prepare">
+		<mkdir dir="${build.dir}"/>
+		<mkdir dir="${dist.dir}"/>
+	</target>
+	<target name="compile" depends="prepare">
+		<javac srcdir="${src.dir}" destdir="${build.dir}">
+			<classpath refid="classpath"/>
+		</javac>
+	</target>
+	<copy todir="${build.dir}">
+		<fileset dir="${resources.dir}"/>
+	</copy>
+	<target name="jar" depends="compile">
+		<jar destfile="${dist.dir}/MessageApp.jar" basedir="${build.dir}">
+			<manifest>
+				<attribute name="Main-Class" value="main.java.com.ubo.tp.message.MessageAppLauncher"/>
+			</manifest>
+		</jar>
+	</target>
+	<target name="default" depends="jar"/>
+</project>
