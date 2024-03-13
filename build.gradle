@@ -1,7 +1,29 @@
-apply plugin: 'java'
-apply plugin: 'application'
-// Define the main class for the JAR manifest
-mainClassName = 'main.java.com.ubo.tp.message.MessageAppLauncher'
+
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.1.0'
+}
+
+group 'com.ubo'
+version '1.0'
+
+repositories {
+    maven {
+        url "https://plugins.gradle.org/m2/"
+    }
+}
+
+dependencies {
+    //classpath 'org.openjfx:javafx-plugin:0.1.0'
+    //implementation 'org.openjfx:javafx-fxml:17'
+    /*implementation('com.sun.xml.bind:jaxb-ri:3.0.2') {
+        exclude group: 'com.sun.xml.bind', module: 'jaxb-release-documentation'
+        exclude group: 'com.sun.xml.bind', module: 'jaxb-samples'
+    }*/
+
+    implementation 'javax.xml.bind:jaxb-api:2.3.0'
+}
 
 sourceSets {
     main {
@@ -10,6 +32,9 @@ sourceSets {
         }
     }
 }
+
+// Define the main class for the JAR manifest
+mainClassName = 'main.java.com.ubo.tp.message.MessageAppLauncher'
 
 // Configure the JAR task
 jar {
@@ -21,14 +46,7 @@ jar {
     }
 }
 
-// Define dependencies if needed
-dependencies {
-    // Example dependency
-    // implementation 'group:artifact:version'
-}
-
-// Configure repositories if needed
-repositories {
-    // Example repository
-    // mavenCentral()
+javafx {
+    version = '17'
+    modules = [ 'javafx.controls', 'javafx.fxml' ]
 }

@@ -1,9 +1,9 @@
-package main.java.com.ubo.tp.message.ihm.view;
+package com.ubo.tp.message.ihm.view;
 
-import main.java.com.ubo.tp.message.datamodel.User;
-import main.java.com.ubo.tp.message.ihm.view.panel.AppButton;
-import main.java.com.ubo.tp.message.ihm.view.panel.DisplayUsersPanel;
-import main.java.com.ubo.tp.message.ihm.view.panel.FilterPanel;
+import com.ubo.tp.message.datamodel.User;
+import com.ubo.tp.message.ihm.view.panel.AppButton;
+import com.ubo.tp.message.ihm.view.panel.DisplayUsersPanel;
+import com.ubo.tp.message.ihm.view.panel.FilterPanel;
 
 import javax.swing.*;
 import java.awt.*;

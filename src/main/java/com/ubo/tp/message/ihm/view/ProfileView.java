@@ -1,14 +1,13 @@
-package main.java.com.ubo.tp.message.ihm.view;
+package com.ubo.tp.message.ihm.view;
 
-import main.java.com.ubo.tp.message.core.util.ImagePanelGenerator;
-import main.java.com.ubo.tp.message.datamodel.User;
-import main.java.com.ubo.tp.message.ihm.view.panel.AppButton;
-import main.java.com.ubo.tp.message.ihm.view.panel.DisplayUsersPanel;
+import com.ubo.tp.message.common.util.ImagePanelGenerator;
+import com.ubo.tp.message.datamodel.User;
+import com.ubo.tp.message.ihm.view.panel.AppButton;
+import com.ubo.tp.message.ihm.view.panel.DisplayUsersPanel;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
-import java.util.List;
 
 public class ProfileView extends JPanel {
     User user;

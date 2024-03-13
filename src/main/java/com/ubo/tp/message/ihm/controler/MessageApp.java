@@ -1,4 +1,4 @@
-package main.java.com.ubo.tp.message.ihm.controler;
+package com.ubo.tp.message.ihm.controler;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -6,20 +6,20 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import main.java.com.ubo.tp.message.core.EntityManager;
-import main.java.com.ubo.tp.message.core.database.IDatabase;
-import main.java.com.ubo.tp.message.core.database.IDatabaseObserver;
-import main.java.com.ubo.tp.message.core.directory.IWatchableDirectory;
-import main.java.com.ubo.tp.message.core.directory.WatchableDirectory;
-import main.java.com.ubo.tp.message.core.util.UserGenerator;
-import main.java.com.ubo.tp.message.datamodel.*;
-import main.java.com.ubo.tp.message.ihm.component.ActionsComponent;
-import main.java.com.ubo.tp.message.ihm.component.ActionsComponentObserver;
-import main.java.com.ubo.tp.message.ihm.view.FolderSelectionView;
-import main.java.com.ubo.tp.message.ihm.view.MessageAppMainView;
-import main.java.com.ubo.tp.message.ihm.view.panel.ControlableContentPanel;
-import main.java.com.ubo.tp.message.logger.DatabaseLogger;
-import main.java.com.ubo.tp.message.logger.DirectoryLogger;
+import com.ubo.tp.message.core.EntityManager;
+import com.ubo.tp.message.core.database.IDatabase;
+import com.ubo.tp.message.core.database.IDatabaseObserver;
+import com.ubo.tp.message.core.directory.IWatchableDirectory;
+import com.ubo.tp.message.core.directory.WatchableDirectory;
+import com.ubo.tp.message.common.util.UserGenerator;
+import com.ubo.tp.message.datamodel.*;
+import com.ubo.tp.message.ihm.component.ActionsComponent;
+import com.ubo.tp.message.ihm.component.ActionsComponentObserver;
+import com.ubo.tp.message.ihm.view.FolderSelectionView;
+import com.ubo.tp.message.ihm.view.MessageAppMainView;
+import com.ubo.tp.message.ihm.view.panel.ControlableContentPanel;
+import com.ubo.tp.message.logger.DatabaseLogger;
+import com.ubo.tp.message.logger.DirectoryLogger;
 
 /**
  * Classe principale l'application.

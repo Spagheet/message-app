@@ -1,4 +1,4 @@
-package main.java.com.ubo.tp.message.ihm.view.panel;
+package com.ubo.tp.message.ihm.view.panel;
 
 import java.awt.Dimension;
 import java.awt.Graphics;

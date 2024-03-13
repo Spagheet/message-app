@@ -1,6 +1,6 @@
-package main.java.com.ubo.tp.message.core.util;
+package com.ubo.tp.message.common.util;
 
-import main.java.com.ubo.tp.message.ihm.view.panel.ImagePanel;
+import com.ubo.tp.message.ihm.view.panel.ImagePanel;
 
 import java.awt.*;
 import java.io.File;

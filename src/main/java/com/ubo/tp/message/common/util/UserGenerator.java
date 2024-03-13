@@ -1,9 +1,8 @@
-package main.java.com.ubo.tp.message.core.util;
+package com.ubo.tp.message.common.util;
 
-import main.java.com.ubo.tp.message.datamodel.User;
+import com.ubo.tp.message.datamodel.User;
 
 import java.util.HashSet;
-import java.util.Random;
 import java.util.UUID;
 
 public class UserGenerator {

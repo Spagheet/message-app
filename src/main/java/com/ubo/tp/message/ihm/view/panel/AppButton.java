@@ -1,6 +1,6 @@
-package main.java.com.ubo.tp.message.ihm.view.panel;
+package com.ubo.tp.message.ihm.view.panel;
 
-import main.java.com.ubo.tp.message.ihm.component.ButtonAction;
+import com.ubo.tp.message.ihm.component.ButtonAction;
 
 import javax.swing.*;
 import java.awt.*;
