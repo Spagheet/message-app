@@ -14,24 +14,13 @@ public class MessagesController extends AbstractMenuOptionController<MessagesCon
     protected AppButton sendMessage;
     public MessagesController(MessagesControllerObserver observer) {
         super(observer);
-        filterButton = new AppButton("Search", buttonSize, new ButtonAction() {
-            @Override
-            public void run() {
-                MessagesController.this.filterRequestEvent();
-            }
-        });
-        sendMessage = new AppButton("Send", buttonSize, new ButtonAction() {
-            @Override
-            public void run() {
-                MessagesController.this.sendMessageEvent();
-            }
-        });
+        filterButton = new AppButton("Search", buttonSize, MessagesController.this::filterRequestEvent);
+        sendMessage = new AppButton("Send", buttonSize, MessagesController.this::sendMessageEvent);
         this.messagesView = new MessagesView(filterButton, sendMessage, backButton);
     }
     protected void filterRequestEvent() {
         String filter = this.messagesView.getFilter();
         this.observer.setFilter(filter);
-        System.out.println("filter button press");
     }
     protected void sendMessageEvent() {
         String message = this.messagesView.getMessage();

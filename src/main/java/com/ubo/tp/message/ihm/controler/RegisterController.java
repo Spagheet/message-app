@@ -16,20 +16,12 @@ public class RegisterController extends AbstractMenuOptionController<RegisterCon
     protected List<AppButton> buttonList;
     public RegisterController(RegisterControllerObserver observer) {
         super(observer);
-        registerButton = new AppButton("Register", buttonSize, new ButtonAction() {
-            @Override
-            public void run() {
-                RegisterController.this.registerRequestEvent();
-            }
+        registerButton = new AppButton("Register", buttonSize, RegisterController.this::registerRequestEvent);
+        folderSelectButton = new AppButton("Select a folder", buttonSize, () -> {
+            FileSelectionView folderSelectionView = new FileSelectionView();
+            RegisterController.this.folderSelectEvent(folderSelectionView.getDirectory());
         });
-        folderSelectButton = new AppButton("Select a folder", buttonSize, new ButtonAction() {
-            @Override
-            public void run() {
-                FileSelectionView folderSelectionView = new FileSelectionView();
-                RegisterController.this.folderSelectEvent(folderSelectionView.getDirectory());
-            }
-        });
-        buttonList = new ArrayList<AppButton>();
+        buttonList = new ArrayList<>();
         buttonList.add(registerButton);
         buttonList.add(backButton);
         buttonList.add(folderSelectButton);

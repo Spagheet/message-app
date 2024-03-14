@@ -213,7 +213,7 @@ public class MessageApp implements ActionsComponentObserver, IDatabaseObserver {
 		User currentUser = this.session.getUser();
 		List<User> followers = new ArrayList<>();
 		for(User user : this.mDatabase.getUsers()) {
-			if(user.getFollows().contains(currentUser)) {
+			if(user.getFollows().contains(currentUser.getUserTag())) {
 				followers.add(user);
 			}
 		}

@@ -26,44 +26,14 @@ public class AppMenuController implements SessionObserver {
         this.observer = observer;
         buttonSize = new Dimension(100, 50);
 
-        loginButton = new AppButton("Login", buttonSize, new ButtonAction() {
-            @Override
-            public void run() {
-                AppMenuController.this.loginButtonEvent();
-            }
-        });
-        logoutButton = new AppButton("Logout", buttonSize, new ButtonAction() {
-            @Override
-            public void run() {
-                AppMenuController.this.logoutButtonEvent();
-            }
-        });
-        registerButton = new AppButton  ("Register", buttonSize, new ButtonAction() {
-            @Override
-            public  void run() {
-                AppMenuController.this.registerButtonEvent();
-            }
-        });
-        chatButton = new AppButton  ("Chat", buttonSize, new ButtonAction() {
-            @Override
-            public  void run() {
-                AppMenuController.this.chatButtonEvent();
-            }
-        });
-        usersButton = new AppButton("Users", buttonSize, new ButtonAction() {
-            @Override
-            public void run() {
-                AppMenuController.this.usersButtonEvent();
-            }
-        });
-        profileButton = new AppButton("Profile", buttonSize, new ButtonAction() {
-            @Override
-            public void run() {
-                AppMenuController.this.profileButtonEvent();
-            }
-        });
+        loginButton = new AppButton("Login", buttonSize, AppMenuController.this::loginButtonEvent);
+        logoutButton = new AppButton("Logout", buttonSize, AppMenuController.this::logoutButtonEvent);
+        registerButton = new AppButton  ("Register", buttonSize, AppMenuController.this::registerButtonEvent);
+        chatButton = new AppButton  ("Chat", buttonSize, AppMenuController.this::chatButtonEvent);
+        usersButton = new AppButton("Users", buttonSize, AppMenuController.this::usersButtonEvent);
+        profileButton = new AppButton("Profile", buttonSize, AppMenuController.this::profileButtonEvent);
 
-        appButtons = new HashSet<AppButton>();
+        appButtons = new HashSet<>();
         appButtons.add(loginButton);
         appButtons.add(registerButton);
 

@@ -7,16 +7,11 @@ import java.awt.*;
 
 public abstract class AbstractMenuOptionController<O extends MenuOptionControllerObserver> {
     O observer;
-    public AbstractMenuOptionController(O observer) {
+    protected AbstractMenuOptionController(O observer) {
         this.observer = observer;
     }
     Dimension buttonSize = new Dimension(100, 50);
-    AppButton backButton = new AppButton("Back", buttonSize, new ButtonAction() {
-        @Override
-        public void run() {
-            AbstractMenuOptionController.this.goBackToMenu();
-        }
-    });
+    AppButton backButton = new AppButton("Back", buttonSize, AbstractMenuOptionController.this::goBackToMenu);
     protected void goBackToMenu() {
         this.observer.goBackToMenu();
     }

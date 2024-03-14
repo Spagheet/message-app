@@ -19,15 +19,9 @@ public class UserListController extends AbstractMenuOptionController<UserListCon
     List<User> userList;
     public UserListController(UserListControllerObserver observer){
         super(observer);
-        System.out.println(observer + " " + this.observer);
         this.subscribeButtonSize = new Dimension(150, 50);
 
-        this.filterUsersButton = new AppButton("Search", buttonSize, new ButtonAction() {
-            @Override
-            public void run() {
-                UserListController.this.userFilterEvent();
-            }
-        });
+        this.filterUsersButton = new AppButton("Search", buttonSize, UserListController.this::userFilterEvent);
         this.userListView = new UserListView(filterUsersButton, backButton);
     }
 
@@ -51,20 +45,10 @@ public class UserListController extends AbstractMenuOptionController<UserListCon
     public void notifyFilterUpdate(List<User> userList) {
         this.userListView.clearUsers();
         this.userList = userList;
-        for(User user : userList) {
-            subsribeButton = new AppButton("Subscribe", subscribeButtonSize, new ButtonAction() {
-                @Override
-                public void run() {
-                    UserListController.this.subscribeEvent(user);
-                }
-            });
-            this.unsubscribeButton = new AppButton("Unsubscribe", subscribeButtonSize, new ButtonAction() {
-                @Override
-                public void run() {
-                    UserListController.this.unsubscribeEvent(user);
-                }
-            });
-            this.userListView.addUser(user, subsribeButton, unsubscribeButton);
+        for(User userListuser : userList) {
+            subsribeButton = new AppButton("Subscribe", subscribeButtonSize, () -> UserListController.this.subscribeEvent(userListuser));
+            this.unsubscribeButton = new AppButton("Unsubscribe", subscribeButtonSize, () -> UserListController.this.unsubscribeEvent(userListuser));
+            this.userListView.addUser(userListuser, subsribeButton, unsubscribeButton);
         }
     }
 

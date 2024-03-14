@@ -48,18 +48,8 @@ public class ProfileController extends AbstractMenuOptionController<ProfileContr
     }
     @Override
     public void sessionUpdate(User user) {
-        this.subscribeButton = new AppButton("Subscribe", subscribeButtonSize, new ButtonAction() {
-            @Override
-            public void run() {
-                ProfileController.this.subscribeEvent(user);
-            }
-        });
-        this.unsubscribeButton = new AppButton("Unsubscribe", subscribeButtonSize, new ButtonAction() {
-            @Override
-            public void run() {
-                ProfileController.this.unsubscribeEvent(user);
-            }
-        });
+        this.subscribeButton = new AppButton("Subscribe", subscribeButtonSize, () -> ProfileController.this.subscribeEvent(user));
+        this.unsubscribeButton = new AppButton("Unsubscribe", subscribeButtonSize, () -> ProfileController.this.unsubscribeEvent(user));
         this.profileView.sessionUpdate(user);
         this.profileView.revalidate();
         this.profileView.repaint();

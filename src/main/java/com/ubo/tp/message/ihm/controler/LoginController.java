@@ -13,14 +13,9 @@ public class LoginController extends AbstractMenuOptionController<LoginControlle
    Set<AppButton> buttonSet;
     public LoginController(LoginControllerObserver observer) {
         super(observer);
-        loginButton = new AppButton("Login", buttonSize, new ButtonAction() {
-            @Override
-            public void run() {
-                LoginController.this.notifyLoginRequestEvent();
-            }
-        });
+        loginButton = new AppButton("Login", buttonSize, LoginController.this::notifyLoginRequestEvent);
 
-        buttonSet = new HashSet<AppButton>();
+        buttonSet = new HashSet<>();
         buttonSet.add(backButton);
         buttonSet.add(loginButton);
 
@@ -32,7 +27,6 @@ public class LoginController extends AbstractMenuOptionController<LoginControlle
     }
 
     public boolean notifyLoginRequestEvent() {
-        System.out.println("login request");
         return this.observer.loginRequestEvent(this.getLoginView().getUsername(), this.getLoginView().getPassword());
     }
 }
